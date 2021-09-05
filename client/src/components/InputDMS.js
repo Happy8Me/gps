@@ -15,7 +15,7 @@ function InputDMS({
   setSignLon,
   handleSubmitDMS}) {
 
-  const handleSignLat = (val) => {
+  const handleSignLat = (val) => {   //coordinates in Southern and Western semispheres have negative values 
     val === "S" 
     ? setSignLat('-')
     : setSignLat('')

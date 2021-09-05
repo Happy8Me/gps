@@ -1,31 +1,11 @@
-import './App.css';
-
 import { useState } from 'react';
+import './App.css';
 import InputDMS from './components/InputDMS';
 import InputDD from './components/InputDD';
 import InputDMM from './components/InputDMM';
 import Map from './components/Map';
 
-
-// https://www.geeksforgeeks.org/program-distance-two-points-earth/
-
-
-// Degrees, minutes, and seconds 
-// let inputDMS = `[
-//   [41°24'12.2"N 2°10'26.5"E], 41.386667, 2.173889
-//   [55°57'25.7"N 3°11'19.9"W]
-// ]`
-
-// let inputDMM = `[
-//   [41 24.2028, 2 10.4418],
-//   [-34 54.2098, 3 11.6534]
-// ]`
-
-
-// "43 05 42.7 N = 43.095194"
-
-
-const convertDMSToDecimal = (d, m, s) => Math.round((d + m/60 + s/3600) * 1000000)/1000000;
+const convertDMSToDecimal = (d, m, s) => Math.round((d + m/60 + s/3600) * 1000000)/1000000;  //d - dergees, m - minutes,  s - seconds
 const convertDMMToDecimal = (d, m) => Math.round((d + m/60) * 1000000)/1000000;
 
 function App() {
@@ -154,7 +134,6 @@ function App() {
         containerElement={<div style={{ height: `400px`, width: `70%` }}/>}
         mapElement={<div style={{ height: `100%` }} />}
       />
-
     </div>
   );
 }
